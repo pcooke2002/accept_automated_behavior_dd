@@ -29,4 +29,17 @@ public class CalculatorController {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
 
+	/**
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return int
+	 */
+	@RequestMapping("/subtracter")
+	public int subtracter(
+			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+		return calculatorService.subtract(firstNumber, secondNumber);
+
+	}
+
 }

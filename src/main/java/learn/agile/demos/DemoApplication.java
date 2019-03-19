@@ -21,9 +21,8 @@ public class DemoApplication {
 	}
 
 	/**
-	 * @return
+	 * @return index
 	 */
-	@SuppressWarnings("javadoc")
 	@RequestMapping("/")
 	public String index() {
 		return "index";
