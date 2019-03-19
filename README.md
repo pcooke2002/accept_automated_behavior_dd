@@ -30,20 +30,14 @@ The steps file will interact with a browser using the Page Object pattern.
 
 Use ```git clone https://github.com/pcooke2002/atddbdd```` to get the entire repository.  
 The master branch latest implements integer addition.  
-The rel_0.0.1 branch provides integer subtraction to master. 
+The rel_0.0.1 branch provides integer addition to master. 
+The rel_0.0.2 branch provides integer subtraction to master. 
 The rel_0.0.4 branch provides integer multiplication master.
-The rel_0.0.6 branch provides merges master with rel_0.0.2, rel_0.0.4.
-The rel_0.0.8 branch provides integer division resulting in whole integer results rel_0.0.6
-The rel_0.2.1 branch provides decimal addition to rel_0.0.8. 
-The rel_0.2.2 branch provides decimal subtraction to rel_0.2.1. 
-The rel_0.2.4 branch provides decimal multiplication to rel_0.2.1. 
-The rel_0.2.6 branch merges rel_0.2.1, rel_0.2.2, rel_0.2.4.
-The rel_0.2.8 branch provides decimal division resulting in decimal results to rel_0.2.6
-the rel_0.3.1 branch provides imaginary number addition to rel_0.2.8. 
-The rel_0.3.2 branch provides imaginary number to rel_0.3.1. 
-The rel_0.3.4 branch provides imaginary number multiplication to rel_0.3.1. 
-The rel_0.3.6 branch merges rel_0.3.1, rel_0.3.2, rel_0.3.4.
-The rel_0.3.8 branch provides imaginary number division resulting in decimal results to rel_0.3.6
+The rel_0.0.6 branch provides inateger divisions with whole integer result.
+The rel_0.0.8 branch merges rel_0.0.1 and rel_0.0.2
+The rel_0.0.10 branch merges rel_0.0.1, rel_0.0.2, and rel_0.0.4
+The rel_0.0.12 branch merges rel_0.0.1, rel_0.0.2, rel_0.0.4, rel_0.0.6
+
 
 Division is not provided:  WHY
     Division is a complex business rule.  Complex business rules usually require infrastructure changes that impact previous changes.
