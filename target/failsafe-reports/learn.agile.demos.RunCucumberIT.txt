@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: learn.agile.demos.RunCucumberIT
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.314 sec - in learn.agile.demos.RunCucumberIT
