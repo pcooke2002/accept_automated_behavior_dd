@@ -33,7 +33,7 @@ The master branch latest implements integer addition.
 The rel_0.0.1 branch provides integer addition to master. 
 The rel_0.0.2 branch provides integer subtraction to master. 
 The rel_0.0.4 branch provides integer multiplication master.
-The rel_0.0.6 branch provides inateger divisions with whole integer result.
+The rel_0.0.6 branch provides integer divisions with whole integer result.
 The rel_0.0.8 branch merges rel_0.0.1 and rel_0.0.2
 The rel_0.0.10 branch merges rel_0.0.1, rel_0.0.2, and rel_0.0.4
 The rel_0.0.12 branch merges rel_0.0.1, rel_0.0.2, rel_0.0.4, rel_0.0.6
