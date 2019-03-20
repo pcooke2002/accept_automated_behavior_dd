@@ -40,4 +40,13 @@ public class CalculatorService {
 	public int multiply(int x, int y) {
 		return x * y;
 	}
+
+	/** divide 2 numbers
+	 * @param x
+	 * @param y
+	 * @return the result of multiplication
+	 */
+	public int divide(int x, int y) {
+		return x / y;
+	}
 }

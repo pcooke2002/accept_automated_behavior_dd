@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-import cucumber.api.PendingException;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -73,4 +73,15 @@ public class DemoSteps {
 	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
+
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I divide the numbers (\\d+) by  (\\d+)$")
+	public void iDivideTheNumbersBy(int x, int y) throws Throwable {
+		demoPage.divideNumbers(x, y);
+	}
+
 }

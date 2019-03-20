@@ -59,5 +59,15 @@ public class CalculatorControllerIT {
         assertEquals(2, calculatorController.multiplyer(2, 1));
         assertEquals(500, calculatorController.multiplyer(100, 5));
         assertEquals(-2200, calculatorController.multiplyer(100, -22));
+}
+
+
+    /**
+     * @throws Exception
+     */
+    @Test
+    public void testDivider() throws Exception {
+        assertEquals(2, calculatorController.divider(2, 1));
+        assertEquals(20, calculatorController.divider(100, 5));
     }
 }

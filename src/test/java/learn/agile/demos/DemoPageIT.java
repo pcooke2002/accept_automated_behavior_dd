@@ -42,6 +42,7 @@ public class DemoPageIT {
 		demoPage.subtractNumbers(5, 5);
 		assertEquals(0, demoPage.getCalculatorResults());
 	}
+
 	
 	/**
 	 * @throws Exception
@@ -51,5 +52,15 @@ public class DemoPageIT {
 		demoPage.go();
 		demoPage.multiplyNumbers(5, 5);
 		assertEquals(25, demoPage.getCalculatorResults());
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleDivideTest() throws Exception {
+		demoPage.go();
+		demoPage.divideNumbers(5, 5);
+		assertEquals(1, demoPage.getCalculatorResults());
 	}
 }

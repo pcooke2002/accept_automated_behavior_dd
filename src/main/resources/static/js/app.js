@@ -35,6 +35,12 @@ myApp.controller("additionController", function($http, $scope) {
         function(response){
             $scope.calculatorResult = response.data;
         });
-    }
+    };
+    $scope.divide =  function() {
+        $http.get('/divider',{params:{firstNumber: $scope.firstNumber, secondNumber: $scope.secondNumber}}).then(
+        function(response){
+            $scope.calculatorResult = response.data;
+        });
+    };
 });
 
