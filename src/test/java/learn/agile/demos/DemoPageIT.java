@@ -33,4 +33,13 @@ public class DemoPageIT {
 		assertEquals(demoPage.getCalculatorResults(), 10);
 	}
 
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleSubtractTest() throws Exception {
+		demoPage.go();
+		demoPage.subtractNumbers(5, 5);
+		assertEquals(0, demoPage.getCalculatorResults());	
+	}
 }

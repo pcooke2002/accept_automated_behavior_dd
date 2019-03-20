@@ -20,5 +20,15 @@ public class CalculatorService {
 	public int add(int x, int y) {
 		return x + y;
 	}
+	
+	/**
+	 * subtract 2 numbers
+	 * @param x
+	 * @param y 
+	 * @return the result of subtraction
+	 */
+	public int subtract(int x, int y) {
+		return x - y;
+	}
 
 }

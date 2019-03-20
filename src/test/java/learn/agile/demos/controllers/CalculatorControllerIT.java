@@ -25,15 +25,28 @@ import learn.agile.demos.controllers.CalculatorController;
 public class CalculatorControllerIT {
 
     @Autowired
-    CalculatorController adderController;
+    CalculatorController calculatorController;
 
     /**
      * @throws Exception
      */
     @Test
     public void testAdder() throws Exception {
-        assertEquals(2, adderController.adder(1, 1));
-        assertEquals(3, adderController.adder(2, 1));
-        assertEquals(1000, adderController.adder(999, 1));
+        assertEquals(2, calculatorController.adder(1, 1));
+        assertEquals(3, calculatorController.adder(2, 1));
+        assertEquals(1000, calculatorController.adder(999, 1));
+    }
+
+    /**
+     * @throws Exception
+     */
+    @Test
+    public void testSubtracter() throws Exception {
+        assertEquals(0, calculatorController.subtracter(1, 1));
+        assertEquals(1, calculatorController.subtracter(2, 1));
+        assertEquals(998, calculatorController.subtracter(999, 1));
+        assertEquals(-1, calculatorController.subtracter(1, 2));
+        assertEquals(-3, calculatorController.subtracter(-2, 1));
+        assertEquals(29, calculatorController.subtracter(-2, -31));
     }
 }
