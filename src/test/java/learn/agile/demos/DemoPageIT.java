@@ -26,7 +26,7 @@ public class DemoPageIT {
 	 * @throws Exception
 	 */
 	@Test
-	public void simpleTest() throws Exception {
+	public void simpleAddTest() throws Exception {
 		demoPage.go();
 		demoPage.addNumbers(5, 5);
 		Thread.sleep(100);
@@ -40,6 +40,16 @@ public class DemoPageIT {
 	public void simpleSubtractTest() throws Exception {
 		demoPage.go();
 		demoPage.subtractNumbers(5, 5);
-		assertEquals(0, demoPage.getCalculatorResults());	
+		assertEquals(0, demoPage.getCalculatorResults());
+	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleMultiplyTest() throws Exception {
+		demoPage.go();
+		demoPage.multiplyNumbers(5, 5);
+		assertEquals(25, demoPage.getCalculatorResults());
 	}
 }

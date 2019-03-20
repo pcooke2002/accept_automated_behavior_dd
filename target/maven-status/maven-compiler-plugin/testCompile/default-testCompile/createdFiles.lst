@@ -1,9 +1,0 @@
-learn/agile/demos/services/CalculatorServiceTest.class
-learn/agile/demos/DemoPageIT.class
-learn/agile/demos/pages/DemoPage.class
-learn/agile/demos/CucumberConfiguration.class
-learn/agile/demos/steps/DemoSteps.class
-learn/agile/demos/RunCucumberIT.class
-learn/agile/demos/controllers/CalculatorControllerIT.class
-learn/agile/demos/DemoApplicationTests.class
-learn/agile/demos/TestConfig.class

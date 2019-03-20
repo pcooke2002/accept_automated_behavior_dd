@@ -22,19 +22,32 @@ public class CalculatorController {
 	 * @param secondNumber
 	 * @return int
 	 */
-
 	@RequestMapping("/adder")
-	public int adder(
-			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
+	public int adder(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
 			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
 
+	/**
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return int
+	 */
 	@RequestMapping("/subtracter")
-	public int subtracter(
-			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
+	public int subtracter(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
 			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
 		return calculatorService.subtract(firstNumber, secondNumber);
+	}
+
+	/**
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return int
+	 */
+	@RequestMapping("/multiplyer")
+	public int multiplyer(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+		return calculatorService.multiply(firstNumber, secondNumber);
 	}
 
 }

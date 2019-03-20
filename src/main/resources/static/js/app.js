@@ -30,5 +30,11 @@ myApp.controller("additionController", function($http, $scope) {
             $scope.calculatorResult = response.data;
         });
     };
+    $scope.multiply =  function() {
+        $http.get('/multiplyer',{params:{firstNumber: $scope.firstNumber, secondNumber: $scope.secondNumber}}).then(
+        function(response){
+            $scope.calculatorResult = response.data;
+        });
+    }
 });
 

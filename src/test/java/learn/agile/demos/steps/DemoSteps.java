@@ -63,4 +63,14 @@ public class DemoSteps {
 	public void i_subtract_the_numbers_and(int arg1, int arg2) throws Exception {
 	    demoPage.subtractNumbers(arg1, arg2);
 	}
+
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I multiply the numbers (-?\\d+) and (-?\\d+)$")
+	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
+		demoPage.multiplyNumbers(x, y);
+	}
 }
