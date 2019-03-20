@@ -57,7 +57,7 @@ public class DemoPage {
     public int getCalculatorResults() {
         WebElement resultEl = (new WebDriverWait(driver, 300))
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-        //System.out.println(">>>>>"+ resultEl.getText());
+      //Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly;
         return Integer.parseInt(resultEl.getText());
     }
 
