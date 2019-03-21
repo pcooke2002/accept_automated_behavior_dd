@@ -1,7 +1,5 @@
 package learn.agile.demos.controllers;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +23,16 @@ import learn.agile.demos.controllers.CalculatorController;
 public class CalculatorControllerIT {
 
     @Autowired
-    CalculatorController adderController;
+    CalculatorController calculatorService;
 
     /**
      * @throws Exception
      */
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testAdder() throws Exception {
-        assertEquals(2, adderController.adder(1, 1));
-        assertEquals(3, adderController.adder(2, 1));
-        assertEquals(1000, adderController.adder(999, 1));
+    	assert(new Float(2f).equals(new Float(calculatorService.adder(1f,1f))));
+    	assert(new Float(-1f).equals(new Float(calculatorService.adder(-2f,1f))));
+    	assert(new Float(999f).equals(new Float(calculatorService.adder(1000f,-1f))));
     }
 }

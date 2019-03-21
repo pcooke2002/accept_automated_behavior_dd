@@ -23,9 +23,9 @@ public class CalculatorController {
 	 * @return int
 	 */
 	@RequestMapping("/adder")
-	public int adder(
-			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+	public float adder(
+			@RequestParam(value = "firstNumber", defaultValue = "0") float firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") float secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
 

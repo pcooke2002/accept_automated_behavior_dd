@@ -1,7 +1,5 @@
 package learn.agile.demos;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +23,13 @@ public class DemoPageIT {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void simpleTest() throws Exception {
 		demoPage.go();
-		demoPage.addNumbers(5, 5);
+		demoPage.addNumbers(5.24f, 5.36f);
 		Thread.sleep(100);
-		assertEquals(demoPage.getCalculatorResults(), 10);
+		assert(new Float(10.6f).equals( new Float(demoPage.getCalculatorResults())));
 	}
 
 }

@@ -1,7 +1,5 @@
 package learn.agile.demos.services;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 import learn.agile.demos.services.CalculatorService;
@@ -17,24 +15,25 @@ public class CalculatorServiceTest {
     /**
      * @throws Exception
      */
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testAdd() throws Exception {
-        assertEquals(1, calculatorService.add(1,0));
-        assertEquals(2, calculatorService.add(1,1));
-        assertEquals(10, calculatorService.add(5,5));
-        assertEquals(100, calculatorService.add(75,25));
+        assert(new Float(1f).equals(new Float(calculatorService.add(1f,0f))));
+        assert(new Float(2f).equals(new Float(calculatorService.add(1f,1f))));
+        assert(new Float(10f).equals(new Float(calculatorService.add(5f,5f))));
+        assert(new Float(100f).equals(new Float(calculatorService.add(75f,25f))));
     }
 
     /**
      * @throws Exception
      */
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testAddWithNegativeNumbers() throws Exception {
-        assertEquals(-1, calculatorService.add(-1,0));
-        assertEquals(-2, calculatorService.add(-1,-1));
-        assertEquals(0, calculatorService.add(1,-1));
-        assertEquals(-5, calculatorService.add(5,-10));
-        assertEquals(-50, calculatorService.add(-75,25));
-
+    	assert(new Float(-1f).equals(new Float(calculatorService.add(-1f,0f))));
+        assert(new Float(-2f).equals(new Float(calculatorService.add(-1f,-1f))));
+        assert(new Float(0f).equals(new Float(calculatorService.add(1f,-1f))));
+        assert(new Float(-5f).equals(new Float(calculatorService.add(5f,-10f))));
+        assert(new Float(-50f).equals(new Float(calculatorService.add(-75f,25f))));
     }
 }
