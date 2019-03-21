@@ -52,7 +52,7 @@ public class DemoSteps {
      * @throws Throwable
      */
     @Then("^the result is (-?\\d+)$")
-    public void the_result_is(int sum) throws Throwable {
+    public void the_result_is(final int sum) throws Throwable {
         assertEquals(demoPage.getCalculatorResults(), sum);
     }
 }
