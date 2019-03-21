@@ -17,7 +17,7 @@ public class CalculatorService {
 	 * @param y 
 	 * @return the result of subtraction
 	 */
-	public int subtract(int x, int y) {
+	public int subtract(final int x, final int y) {
 		return x - y;
 	}
 
