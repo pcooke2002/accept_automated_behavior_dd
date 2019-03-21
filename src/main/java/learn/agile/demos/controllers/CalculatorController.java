@@ -24,8 +24,8 @@ public class CalculatorController {
 	 */
 	@RequestMapping("/multiplyer")
 	public int multiplyer(
-			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+			@RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
 		return calculatorService.multiply(firstNumber, secondNumber);
 	}
 

@@ -16,7 +16,7 @@ public class CalculatorService {
 	 * @param y
 	 * @return the result of multiplication
 	 */
-	public int multiply(int x, int y) {
+	public int multiply(final int x, final int y) {
 		return x * y;
 	}
 

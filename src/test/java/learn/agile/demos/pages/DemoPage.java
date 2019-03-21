@@ -29,7 +29,7 @@ public class DemoPage {
      * @param env
      */
     @Autowired
-    public DemoPage(final WebDriver driver, Environment env) {
+    public DemoPage(final WebDriver driver, final Environment env) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
         this.env = env;
@@ -57,7 +57,7 @@ public class DemoPage {
 	 * @param x
 	 * @param y
 	 */
-	public void multiplyNumbers(int x, int y) {
+	public void multiplyNumbers(final int x, final int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
         driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
         driver.findElement(By.id("multiplyer-button")).click();

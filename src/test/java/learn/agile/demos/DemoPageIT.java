@@ -30,6 +30,7 @@ public class DemoPageIT {
 	public void simpleMultiplyTest() throws Exception {
 		demoPage.go();
 		demoPage.multiplyNumbers(5, 5);
+		Thread.sleep(100);  //web driver on some OSs respond too quickly
 		assertEquals(25, demoPage.getCalculatorResults());
 	}
 }
