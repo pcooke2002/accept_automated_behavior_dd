@@ -1,4 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-atdd demo,learn.agile.demos.services,CalculatorService,0,7,0,0,0,2,0,2,0,2
-atdd demo,learn.agile.demos,DemoApplication,7,3,0,0,3,1,2,1,2,1
-atdd demo,learn.agile.demos.controllers,CalculatorController,6,3,0,0,1,1,1,1,1,1

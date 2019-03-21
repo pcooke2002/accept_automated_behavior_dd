@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: learn.agile.demos.DemoPageIT
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.315 sec - in learn.agile.demos.DemoPageIT
