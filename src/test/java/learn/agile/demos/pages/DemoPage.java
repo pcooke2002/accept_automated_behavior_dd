@@ -54,20 +54,18 @@ public class DemoPage {
 	}
 
 	/**
-	 * @return results
-	 * @throws InterruptedException
-	 */
+     * @return  results
+     * @throws InterruptedException 
+     */
 
 	public int getCalculatorResults() throws InterruptedException {
-		WebElement resultEl = (new WebDriverWait(driver, 300))
-				.until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-		// Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
-		return Integer.parseInt(resultEl.getText());
-	}
+        WebElement resultEl = (new WebDriverWait(driver, 300))
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
+        Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+        return Integer.parseInt(resultEl.getText());
+    }
 
-	/**
-	 * subtract 2 numbers
-	 * 
+	/** subtract 2 numbers
 	 * @param x
 	 * @param y
 	 */
@@ -77,9 +75,7 @@ public class DemoPage {
 		driver.findElement(By.id("subtracter-button")).click();
 	}
 
-	/**
-	 * multiply 2 numbers
-	 * 
+	/** multiply 2 numbers
 	 * @param x
 	 * @param y
 	 */
@@ -89,14 +85,10 @@ public class DemoPage {
 		driver.findElement(By.id("multiplyer-button")).click();
 	}
 
-	/**
-	 * @param x
-	 * @param y
-	 */
 	public void divideNumbers(int x, int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
 		driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
 		driver.findElement(By.id("divider-button")).click();
-
+		
 	}
 }
