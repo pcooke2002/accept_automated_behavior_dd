@@ -13,12 +13,11 @@ public class CalculatorService {
 
 	/**
 	 * subtract 2 numbers
-	 * @param x
-	 * @param y 
+	 * @param firstNumber
+	 * @param secondNumber 
 	 * @return the result of subtraction
 	 */
-	public int subtract(int x, int y) {
-		return x - y;
+	public float subtract(float firstNumber, float secondNumber) {
+		return firstNumber - secondNumber;
 	}
-
 }

@@ -24,9 +24,9 @@ public class CalculatorController {
 	 * @return int
 	 */
 	@RequestMapping("/subtracter")
-	public int subtracter(
-			@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+	public float subtracter(
+			@RequestParam(value = "firstNumber", defaultValue = "0") float firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") float secondNumber) {
 		return calculatorService.subtract(firstNumber, secondNumber);
 	}
 
