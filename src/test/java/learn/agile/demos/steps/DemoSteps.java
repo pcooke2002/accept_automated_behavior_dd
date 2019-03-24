@@ -40,15 +40,15 @@ public class DemoSteps {
      * @param sum
      * @throws Throwable
      */
-    @Then("^the result is (-?\\d+)$")
+    @Then("^the result is (-?\\d+\\.?\\d*)$")
     public void the_result_is(int sum) throws Throwable {
-        assertEquals(demoPage.getCalculatorResults(), sum);
+    	 assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
     }
 
   
 
-	@When("^I divide the numbers (\\d+) by  (\\d+)$")
-	public void iDivideTheNumbersBy(int x, int y) throws Throwable {
+	@When("^I divide the numbers (-?\\d+\\.?\\d*) by  (-?\\d+\\.?\\d*)$")
+	public void iDivideTheNumbersBy(float x, float y) throws Throwable {
 		demoPage.divideNumbers(x, y);
 	}
 

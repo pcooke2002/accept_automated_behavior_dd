@@ -1,7 +1,5 @@
 package learn.agile.demos;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +24,12 @@ public class DemoPageIT {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void simpleDivideTest() throws Exception {
 		demoPage.go();
-		demoPage.divideNumbers(5, 5);
-		assertEquals(1, demoPage.getCalculatorResults());
+		demoPage.divideNumbers(15.2324f, 5.333f);
+		Thread.sleep(100);
+		assert(new Float(2.8562534f).equals( new Float(demoPage.getCalculatorResults())));
 	}
 }

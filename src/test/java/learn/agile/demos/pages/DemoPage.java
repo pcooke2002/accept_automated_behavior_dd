@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -46,20 +45,20 @@ public class DemoPage {
      * @return add results
      * @throws InterruptedException 
      */
-    public int getCalculatorResults() throws InterruptedException {
+    public float getCalculatorResults() throws InterruptedException {
         WebElement resultEl = (new WebDriverWait(driver, 300))
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-        Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
-        return Integer.parseInt(resultEl.getText());
+        //Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+        return Float.parseFloat(resultEl.getText());
     }
 
 	/**
 	 * @param x
 	 * @param y
 	 */
-	public void divideNumbers(int x, int y) {
-		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
-        driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
+	public void divideNumbers(float x, float y) {
+		driver.findElement(By.id("first-number")).sendKeys(Float.toString(x));
+        driver.findElement(By.id("second-number")).sendKeys(Float.toString(y));
         driver.findElement(By.id("divider-button")).click();
 		
 	}

@@ -12,12 +12,13 @@ public class CalculatorService {
 	int notUsedVariableForScanBugs;
 
 	/**
-	 * @param x
-	 * @param y
+	 * @param firstNumber
+	 * @param secondNumber
 	 * @return the result of multiplication
 	 */
-	public int divide(int x, int y) {
-		return x / y;
+	public float divide(final float firstNumber, final float secondNumber) {
+		System.out.println(">" + (firstNumber/secondNumber) + "<");
+		return firstNumber / secondNumber;
 	}
 
 }
