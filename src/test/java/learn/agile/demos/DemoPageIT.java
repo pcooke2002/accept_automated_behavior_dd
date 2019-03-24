@@ -30,6 +30,7 @@ public class DemoPageIT {
 	public void simpleDivideTest() throws Exception {
 		demoPage.go();
 		demoPage.divideNumbers(5, 5);
+//		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		assertEquals(1, demoPage.getCalculatorResults());
 	}
 }

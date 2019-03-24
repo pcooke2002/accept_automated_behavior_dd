@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -49,7 +48,7 @@ public class DemoPage {
     public int getCalculatorResults() throws InterruptedException {
         WebElement resultEl = (new WebDriverWait(driver, 300))
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-        Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+//		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
         return Integer.parseInt(resultEl.getText());
     }
 
