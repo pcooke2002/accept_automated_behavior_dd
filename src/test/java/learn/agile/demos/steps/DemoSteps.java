@@ -1,18 +1,14 @@
 package learn.agile.demos.steps;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import learn.agile.demos.CucumberConfiguration;
 import learn.agile.demos.DemoApplication;
 import learn.agile.demos.pages.DemoPage;
-
-
 
 /**
  * @author pcooke
@@ -45,13 +41,13 @@ public class DemoSteps {
        demoPage.addNumbers(x, y);
     }
 
-    /**
-     * @param sum
-     * @throws Throwable
-     */
-    @SuppressWarnings("deprecation")
-	@Then("^the result is (-?\\d+\\.?\\d*)$")
-    public void the_result_is(float sum) throws Throwable {
-        assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
-    }
+	/**
+	 * @param arg1
+	 * @param arg2
+	 * @throws Exception
+	 */
+	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
+	public void i_subtract_the_numbers_and(float x, float y) throws Exception {
+	    demoPage.subtractNumbers(x, y);
+	}
 }

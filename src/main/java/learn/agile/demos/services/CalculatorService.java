@@ -21,4 +21,13 @@ public class CalculatorService {
 		return x + y;
 	}
 
+    /**
+	 * subtract 2 numbers
+	 * @param firstNumber
+	 * @param secondNumber 
+	 * @return the result of subtraction
+	 */
+	public float subtract(float firstNumber, float secondNumber) {
+		return firstNumber - secondNumber;
+	}
 }
