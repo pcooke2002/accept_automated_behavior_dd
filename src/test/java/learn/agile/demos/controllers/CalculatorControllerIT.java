@@ -30,6 +30,7 @@ public class CalculatorControllerIT {
 	 * ensure existing integer tests continue to work
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testIntegerMultiplyer() throws Exception {
 		assert (new Float(0f).equals(new Float(calculatorController.multiplyer(1f, 0f))));
@@ -41,6 +42,7 @@ public class CalculatorControllerIT {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testDecimalMultiplyer() throws Exception {
 		assert (new Float(0.77197933f).equals(new Float(calculatorController.multiplyer(2.323f, 0.33232f))));
