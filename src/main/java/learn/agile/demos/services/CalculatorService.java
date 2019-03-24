@@ -19,5 +19,4 @@ public class CalculatorService {
 	public float multiply(final float firstNumber, final float secondNumber) {
 		return firstNumber * secondNumber;
 	}
-
 }
