@@ -17,6 +17,7 @@ public class CalculatorService {
 	 * @return the result of multiplication
 	 */
 	public float multiply(final float firstNumber, final float secondNumber) {
+		System.out.println("f=" + firstNumber + " s=" + secondNumber + " t="+ (firstNumber*secondNumber));
 		return firstNumber * secondNumber;
 	}
 }

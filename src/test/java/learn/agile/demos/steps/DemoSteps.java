@@ -1,7 +1,5 @@
 package learn.agile.demos.steps;
 
-import static org.junit.Assert.assertEquals;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -40,9 +38,10 @@ public class DemoSteps {
      * @param sum
      * @throws Throwable
      */
-    @Then("^the result is (-?\\d+)$")
-    public void the_result_is(int sum) throws Throwable {
-        assertEquals(demoPage.getCalculatorResults(), sum);
+    @SuppressWarnings("deprecation")
+	@Then("^the result is (-?\\d+\\.?\\d*)$")
+    public void the_result_is(float sum) throws Throwable {
+    	 assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
     }
 
 	/**
