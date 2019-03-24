@@ -29,6 +29,6 @@ myApp.controller("additionController", function($http, $scope) {
         function(response){
             $scope.calculatorResult = response.data;
         });
-    },
+    }
 });
 

@@ -20,24 +20,24 @@ public class CalculatorController {
 	/**
 	 * @param firstNumber
 	 * @param secondNumber
-	 * @return int
+	 * @return float
 	 */
 	@RequestMapping("/adder")
 	public float adder(
-			@RequestParam(value = "firstNumber", defaultValue = "0") float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") float secondNumber) {
+			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
 	
 	/**
 	 * @param firstNumber
 	 * @param secondNumber
-	 * @return int
+	 * @return float
 	 */
 	@RequestMapping("/subtracter")
 	public float subtracter(
-			@RequestParam(value = "firstNumber", defaultValue = "0") float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") float secondNumber) {
+			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
 		return calculatorService.subtract(firstNumber, secondNumber);
 	}
 }
