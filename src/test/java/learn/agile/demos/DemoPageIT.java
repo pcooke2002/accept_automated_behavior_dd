@@ -29,7 +29,7 @@ public class DemoPageIT {
 	public void simpleMultiplyTest() throws Exception {
 		demoPage.go();
 		demoPage.multiplyNumbers(5f, 5f);
-		Thread.sleep(100);  //web driver on some OSs respond too quickly
+//		Thread.sleep(100);  //web driver on some OSs respond too quickly
 		assert(new Float(25f).equals( new Float(demoPage.getCalculatorResults())));
 	}
 }
