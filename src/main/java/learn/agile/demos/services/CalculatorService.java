@@ -27,7 +27,17 @@ public class CalculatorService {
 	 * @param secondNumber 
 	 * @return the result of subtraction
 	 */
-	public float subtract(float firstNumber, float secondNumber) {
-		return firstNumber - secondNumber;
+	public float subtract(float x, float y) {
+		return x - y;
+	}
+
+	/**
+	 * multiply 2 numbers
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return the result of multiplication
+	 */
+	public float multiply(final float x, final float y) {
+		return x * y;
 	}
 }

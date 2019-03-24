@@ -21,7 +21,7 @@ public class DemoApplication {
 	}
 
 	/**
-	 * @return
+	 * @return the index
 	 */
 	@RequestMapping("/")
 	public String index() {

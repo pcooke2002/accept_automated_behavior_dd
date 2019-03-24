@@ -5,6 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import learn.agile.demos.CucumberConfiguration;
 import learn.agile.demos.DemoApplication;
@@ -49,5 +50,25 @@ public class DemoSteps {
 	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
 	public void i_subtract_the_numbers_and(float x, float y) throws Exception {
 	    demoPage.subtractNumbers(x, y);
+	}
+	
+	/**
+     * @param sum
+     * @throws Throwable
+     */
+    @SuppressWarnings("deprecation")
+	@Then("^the result is (-?\\d+\\.?\\d*)$")
+    public void the_result_is(float sum) throws Throwable {
+    	 assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
+    }
+
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I multiply the numbers (-?\\d+\\.?\\d+) and (-?\\d+\\.?\\d+)$")
+	public void iMultiplyTheNumbersAnd(float x, float y) throws Throwable {
+		demoPage.multiplyNumbers(x, y);
 	}
 }
