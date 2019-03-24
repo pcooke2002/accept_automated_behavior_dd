@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -58,8 +57,8 @@ public class DemoPage {
 	 * @param y
 	 */
 	public void multiplyNumbers(final int x, final int y) {
-		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
-        driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
+		driver.findElement(By.id("first-number")).sendKeys(Float.toString(x));
+        driver.findElement(By.id("second-number")).sendKeys(Float.toString(y));
         driver.findElement(By.id("multiplyer-button")).click();
 		
 	}

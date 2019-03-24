@@ -1,7 +1,5 @@
 package learn.agile.demos.services;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 import learn.agile.demos.services.CalculatorService;
@@ -29,7 +27,8 @@ public class CalculatorServiceTest {
     /**
      * @throws Exception
      */
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testMultiplyWithNegativeInteger() throws Exception {
     	 assert(new Float(-0f).equals(new Float(calculatorService.multiply(-1f,0f))));
     	 assert(new Float(1f).equals(new Float(calculatorService.multiply(-1f,-1f))));
@@ -53,7 +52,8 @@ public class CalculatorServiceTest {
     /**
      * @throws Exception
      */
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testMultiplyWithNegativeDecimal() throws Exception {
     	 assert(new Float(-0f).equals(new Float(calculatorService.multiply(-1.34534f,0f))));
     	 assert(new Float(1.8063351f).equals(new Float(calculatorService.multiply(-1.345f,-1.343f))));
