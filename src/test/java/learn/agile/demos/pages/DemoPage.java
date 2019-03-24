@@ -53,12 +53,12 @@ public class DemoPage {
     }
 
 	/**
-	 * @param x
-	 * @param y
+	 * @param f
+	 * @param g
 	 */
-	public void multiplyNumbers(final int x, final int y) {
-		driver.findElement(By.id("first-number")).sendKeys(Float.toString(x));
-        driver.findElement(By.id("second-number")).sendKeys(Float.toString(y));
+	public void multiplyNumbers(final float f, final float g) {
+		driver.findElement(By.id("first-number")).sendKeys(Float.toString(f));
+        driver.findElement(By.id("second-number")).sendKeys(Float.toString(g));
         driver.findElement(By.id("multiplyer-button")).click();
 		
 	}
