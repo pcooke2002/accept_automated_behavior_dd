@@ -30,21 +30,22 @@ The steps file will interact with a browser using the Page Object pattern.
 
 Use ```git clone https://github.com/pcooke2002/atddbdd```` to get the entire repository.  
 The master branch latest implements integer addition.  
-The rel_0.0.1 branch provides integer addition to master. 
-The rel_0.0.2 branch provides integer subtraction to master. 
-The rel_0.0.4 branch provides integer multiplication master.
-The rel_0.0.6 branch provides inateger divisions with whole integer result.
+The rel_0.0.1 branch provides integer addition. 
+The rel_0.0.2 branch provides integer subtraction. 
+The rel_0.0.4 branch provides integer multiplication
+The rel_0.0.6 branch provides integer divisions with whole integer result.
 The rel_0.0.8 branch merges rel_0.0.1 and rel_0.0.2
 The rel_0.0.10 branch merges rel_0.0.1, rel_0.0.2, and rel_0.0.4
 The rel_0.0.12 branch merges rel_0.0.1, rel_0.0.2, rel_0.0.4, rel_0.0.6
 
+The rel_0.1.1 branch provides integer and decimal addition. 
+The rel_0.1.2 branch provides integer and decimal subtraction. 
+The rel_0.1.4 branch provides integer and decimal multiplication.
+The rel_0.1.6 branch provides integer and decimal divisions excluding divide by zero and imaginary numbers.
+The rel_0.1.8 branch merges rel_0.1.1 and rel_0.1.2
+The rel_0.1.10 branch merges rel_0.1.1, rel_0.1.2, and rel_0.1.4
+The rel_0.1.12 branch merges rel_0.1.1, rel_0.1.2, rel_0.1.4, rel_0.1.6
 
-Division is not provided:  WHY
-    Division is a complex business rule.  Complex business rules usually require infrastructure changes that impact previous changes.
-    This is true for division.  In a full day class the students would probably write subtraction, then multiplication. Then they would 
-    write division and learn the hardway that all the previous work has to be refactored. 
-    
-    Had they gone from the silver thread of addition to division they could have simply refactored all of the infrastructure plus ONLY the addtion test.  Subtraction and multipliction would not have to be rewritten
 
 
 ------------------------------------------------FYI----------------------------------------------------------

@@ -12,12 +12,12 @@ public class CalculatorService {
 	int notUsedVariableForScanBugs;
 
 	/**
-	 * @param x
-	 * @param y
+	 * @param firstNumber
+	 * @param secondNumber
 	 * @return the result of multiplication
 	 */
-	public int multiply(final int x, final int y) {
-		return x * y;
+	public float multiply(final float firstNumber, final float secondNumber) {
+		return firstNumber * secondNumber;
 	}
 
 }

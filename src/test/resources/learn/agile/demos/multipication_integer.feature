@@ -1,4 +1,4 @@
-Feature: Multiplication Feature
+Feature: Integer Multiplication Feature
 
   Scenario: multiply two positive numbers
     Given I am on the demo page

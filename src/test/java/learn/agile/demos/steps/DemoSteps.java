@@ -45,14 +45,12 @@ public class DemoSteps {
         assertEquals(demoPage.getCalculatorResults(), sum);
     }
 
-   
-
 	/**
 	 * @param x
 	 * @param y
 	 * @throws Throwable
 	 */
-	@When("^I multiply the numbers (-?\\d+) and (-?\\d+)$")
+	@When("^I multiply the numbers (-?\\d+\\.?\\d+) and (-?\\d+\\.?\\d+)$")
 	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
