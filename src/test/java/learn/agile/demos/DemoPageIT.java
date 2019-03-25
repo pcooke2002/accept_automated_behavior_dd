@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -29,7 +28,8 @@ public class DemoPageIT {
 	public void simpleAddTest() throws Exception {
 		demoPage.go();
 		demoPage.addNumbers(5, 5);
-		//Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+		 Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
+		// too quickly
 		assertEquals(demoPage.getCalculatorResults(), 10);
 	}
 
@@ -40,10 +40,11 @@ public class DemoPageIT {
 	public void simpleSubtractTest() throws Exception {
 		demoPage.go();
 		demoPage.subtractNumbers(5, 5);
-		//Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+		 Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
+		// too quickly
 		assertEquals(0, demoPage.getCalculatorResults());
 	}
-	
+
 	/**
 	 * @throws Exception
 	 */
@@ -51,7 +52,8 @@ public class DemoPageIT {
 	public void simpleMultiplyTest() throws Exception {
 		demoPage.go();
 		demoPage.multiplyNumbers(5, 5);
-		//Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+		 Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
+		// too quickly
 		assertEquals(25, demoPage.getCalculatorResults());
 	}
 }

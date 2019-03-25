@@ -17,7 +17,7 @@ public class CalculatorService {
 	 * @param y
 	 * @return the result of the addition
 	 */
-	public int add(int x, int y) {
+	public int add(final int x, final int y) {
 		return x + y;
 	}
 
@@ -28,16 +28,18 @@ public class CalculatorService {
 	 * @param y
 	 * @return the result of subtraction
 	 */
-	public int subtract(int x, int y) {
+	public int subtract(final int x, final int y) {
 		return x - y;
 	}
 
-	/** multiply 2 numbers
+	/**
+	 * multiply 2 numbers
+	 * 
 	 * @param x
 	 * @param y
 	 * @return the result of multiplication
 	 */
-	public int multiply(int x, int y) {
+	public int multiply(final int x, final int y) {
 		return x * y;
 	}
 }

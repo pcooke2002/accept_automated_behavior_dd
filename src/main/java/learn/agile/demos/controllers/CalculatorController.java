@@ -23,8 +23,9 @@ public class CalculatorController {
 	 * @return int
 	 */
 	@RequestMapping("/adder")
-	public int adder(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+	public int adder(
+			@RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
 
@@ -34,8 +35,9 @@ public class CalculatorController {
 	 * @return int
 	 */
 	@RequestMapping("/subtracter")
-	public int subtracter(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+	public int subtracter(
+			@RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
 		return calculatorService.subtract(firstNumber, secondNumber);
 	}
 
@@ -45,8 +47,9 @@ public class CalculatorController {
 	 * @return int
 	 */
 	@RequestMapping("/multiplyer")
-	public int multiplyer(@RequestParam(value = "firstNumber", defaultValue = "0") int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") int secondNumber) {
+	public int multiplyer(
+			@RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
 		return calculatorService.multiply(firstNumber, secondNumber);
 	}
 

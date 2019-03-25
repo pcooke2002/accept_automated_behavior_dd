@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -30,7 +29,7 @@ public class DemoPage {
 	 * @param env
 	 */
 	@Autowired
-	public DemoPage(final WebDriver driver, Environment env) {
+	public DemoPage(final WebDriver driver, final Environment env) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 		this.env = env;
@@ -47,39 +46,44 @@ public class DemoPage {
 	 * @param x
 	 * @param y
 	 */
-	public void addNumbers(int x, int y) {
+	public void addNumbers(final int x, final int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
 		driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
 		driver.findElement(By.id("adder-button")).click();
 	}
 
 	/**
-     * @return  results
-     * @throws InterruptedException 
-     */
+	 * @return results
+	 * @throws InterruptedException
+	 */
 
 	public int getCalculatorResults() throws InterruptedException {
-        WebElement resultEl = (new WebDriverWait(driver, 300))
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-        //Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
-        return Integer.parseInt(resultEl.getText());
-    }
+		WebElement resultEl = (new WebDriverWait(driver, 300))
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
+//		 Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
+		// too quickly
+		return Integer.parseInt(resultEl.getText());
+	}
 
-	/** subtract 2 numbers
+	/**
+	 * subtract 2 numbers
+	 * 
 	 * @param x
 	 * @param y
 	 */
-	public void subtractNumbers(int x, int y) {
+	public void subtractNumbers(final int x, final int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
 		driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
 		driver.findElement(By.id("subtracter-button")).click();
 	}
 
-	/** multiply 2 numbers
+	/**
+	 * multiply 2 numbers
+	 * 
 	 * @param x
 	 * @param y
 	 */
-	public void multiplyNumbers(int x, int y) {
+	public void multiplyNumbers(final int x, final int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
 		driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
 		driver.findElement(By.id("multiplyer-button")).click();
