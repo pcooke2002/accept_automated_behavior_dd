@@ -17,7 +17,7 @@ myApp.config(['$httpProvider', function($httpProvider) {
 }]);
 
 
-myApp.controller("additionController", function($http, $scope) {
+myApp.controller("calculatorController", function($http, $scope) {
     $scope.multiply =  function() {
         $http.get('/multiplyer',{params:{firstNumber: $scope.firstNumber, secondNumber: $scope.secondNumber}}).then(
         function(response){
@@ -25,5 +25,3 @@ myApp.controller("additionController", function($http, $scope) {
         });
     }
 });
-
-

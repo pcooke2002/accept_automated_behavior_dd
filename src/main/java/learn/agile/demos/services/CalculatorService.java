@@ -2,7 +2,6 @@ package learn.agile.demos.services;
 
 import org.springframework.stereotype.Service;
 
-
 /**
  * @author pcooke
  *

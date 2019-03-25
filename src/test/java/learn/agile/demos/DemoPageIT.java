@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -22,7 +21,6 @@ public class DemoPageIT {
 	@Autowired
 	DemoPage demoPage;
 
-	
 	/**
 	 * @throws Exception
 	 */
@@ -30,7 +28,7 @@ public class DemoPageIT {
 	public void simpleMultiplyTest() throws Exception {
 		demoPage.go();
 		demoPage.multiplyNumbers(5, 5);
-		Thread.sleep(100);  //web driver on some OSs respond too quickly
+//		Thread.sleep(100); // web driver on some OSs respond too quickly
 		assertEquals(25, demoPage.getCalculatorResults());
 	}
 }
