@@ -2,7 +2,6 @@ package learn.agile.demos.services;
 
 import org.springframework.stereotype.Service;
 
-
 /**
  * @author pcooke
  *
@@ -16,7 +15,7 @@ public class CalculatorService {
 	 * @param y
 	 * @return the result of multiplication
 	 */
-	public int divide(int x, int y) {
+	public int divide(final int x, final int y) {
 		return x / y;
 	}
 
