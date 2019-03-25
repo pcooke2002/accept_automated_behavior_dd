@@ -41,7 +41,7 @@ public class DemoSteps {
      * @throws Throwable
      */
     @When("^I add the numbers (-?\\d+) and (-?\\d+)$")
-    public void i_add_the_numbers_and(int x, int y) throws Throwable {
+    public void i_add_the_numbers_and(final int x, final int y) throws Throwable {
        demoPage.addNumbers(x, y);
     }
 
@@ -50,7 +50,7 @@ public class DemoSteps {
      * @throws Throwable
      */
     @Then("^the result is (-?\\d+)$")
-    public void the_result_is(int sum) throws Throwable {
+    public void the_result_is(final int sum) throws Throwable {
         assertEquals(demoPage.getCalculatorResults(), sum);
     }
 
@@ -60,7 +60,7 @@ public class DemoSteps {
 	 * @throws Exception
 	 */
 	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
-	public void i_subtract_the_numbers_and(int arg1, int arg2) throws Exception {
+	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
 	    demoPage.subtractNumbers(arg1, arg2);
 	}
 }
