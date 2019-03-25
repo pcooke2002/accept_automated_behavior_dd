@@ -23,7 +23,6 @@ public class DemoApplication {
 	/**
 	 * @return
 	 */
-	@SuppressWarnings("javadoc")
 	@RequestMapping("/")
 	public String index() {
 		return "index";

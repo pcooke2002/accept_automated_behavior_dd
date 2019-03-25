@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-@ComponentScan(basePackages = "person.pcooke.demos")
+@ComponentScan(basePackages = "learn.agile.demos")
 public class CucumberConfiguration {
 }
 

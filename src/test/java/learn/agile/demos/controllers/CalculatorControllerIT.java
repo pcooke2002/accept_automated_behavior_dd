@@ -12,7 +12,6 @@ import learn.agile.demos.DemoApplication;
 import learn.agile.demos.controllers.CalculatorController;
 
 /**
- 
  * <p>
  * This tests the controller. It autowires the controller using Spring and verifies that it works
  * as expected. This is different than the service level unit test that are run directly against

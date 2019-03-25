@@ -43,7 +43,7 @@ public class DemoSteps {
      * @throws Throwable
      */
     @When("^I add the numbers (-?\\d+) and (-?\\d+)$")
-    public void i_add_the_numbers_and(int x, int y) throws Throwable {
+    public void i_add_the_numbers_and(final int x, final int y) throws Throwable {
        demoPage.addNumbers(x, y);
     }
 
