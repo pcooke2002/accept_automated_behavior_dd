@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -34,13 +33,12 @@ public class DemoSteps {
 		demoPage.go();
 	}
 
-
 	/**
 	 * @param sum
 	 * @throws Throwable
 	 */
 	@Then("^the result is (-?\\d+)$")
-	public void the_result_is(int sum) throws Throwable {
+	public void the_result_is(final int sum) throws Throwable {
 		assertEquals(demoPage.getCalculatorResults(), sum);
 	}
 
@@ -50,7 +48,7 @@ public class DemoSteps {
 	 * @throws Exception
 	 */
 	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
-	public void i_subtract_the_numbers_and(int arg1, int arg2) throws Exception {
-	    demoPage.subtractNumbers(arg1, arg2);
+	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
+		demoPage.subtractNumbers(arg1, arg2);
 	}
 }

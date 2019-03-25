@@ -17,7 +17,6 @@ public class CalculatorController {
 	@Autowired
 	private CalculatorService calculatorService;
 
-	
 	/**
 	 * @param firstNumber
 	 * @param secondNumber

@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -22,7 +21,6 @@ public class DemoPageIT {
 	@Autowired
 	DemoPage demoPage;
 
-	
 	/**
 	 * @throws Exception
 	 */
@@ -32,6 +30,6 @@ public class DemoPageIT {
 		demoPage.subtractNumbers(5, 5);
 //		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		assertEquals(0, demoPage.getCalculatorResults());
-		
+
 	}
 }
