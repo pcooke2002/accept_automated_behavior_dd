@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -20,7 +19,6 @@ public class DemoPageIT {
 	@Autowired
 	DemoPage demoPage;
 
-	
 	/**
 	 * @throws Exception
 	 */
@@ -30,6 +28,6 @@ public class DemoPageIT {
 		demoPage.go();
 		demoPage.multiplyNumbers(5f, 5f);
 //		Thread.sleep(100);  //web driver on some OSs respond too quickly
-		assert(new Float(25f).equals( new Float(demoPage.getCalculatorResults())));
+		assert (new Float(25f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 }

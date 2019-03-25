@@ -11,46 +11,47 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 /**
- * This represents a page in the application. Ideally we want to isolate all the details
- * about the page to this class. That way if we change an id or class name, there is just
- * a single place where we have to update it and our step files can remain unchanged.
+ * This represents a page in the application. Ideally we want to isolate all the
+ * details about the page to this class. That way if we change an id or class
+ * name, there is just a single place where we have to update it and our step
+ * files can remain unchanged.
  */
 
 @Component
 public class DemoPage {
 
-    private WebDriver driver;
+	private WebDriver driver;
 
-    private Environment env;
+	private Environment env;
 
-    /**
-     * @param driver
-     * @param env
-     */
-    @Autowired
-    public DemoPage(final WebDriver driver, final Environment env) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
-        this.env = env;
-    }
+	/**
+	 * @param driver
+	 * @param env
+	 */
+	@Autowired
+	public DemoPage(final WebDriver driver, final Environment env) {
+		PageFactory.initElements(driver, this);
+		this.driver = driver;
+		this.env = env;
+	}
 
-    /**
-     * 
-     */
-    public void go() {
-        driver.get("http://localhost:" + env.getProperty("local.server.port") + "/");
-    }
+	/**
+	 * 
+	 */
+	public void go() {
+		driver.get("http://localhost:" + env.getProperty("local.server.port") + "/");
+	}
 
-    /**
-     * @return add results
-     * @throws InterruptedException 
-     */
-    public float getCalculatorResults() throws InterruptedException {
-        WebElement resultEl = (new WebDriverWait(driver, 300))
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
+	/**
+	 * @return add results
+	 * @throws InterruptedException
+	 */
+	public float getCalculatorResults() throws InterruptedException {
+		WebElement resultEl = (new WebDriverWait(driver, 300))
+				.until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
 //        Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
-        return Float.parseFloat(resultEl.getText());
-    }
+		return Float.parseFloat(resultEl.getText());
+	}
 
 	/**
 	 * @param f
@@ -58,8 +59,8 @@ public class DemoPage {
 	 */
 	public void multiplyNumbers(final float f, final float g) {
 		driver.findElement(By.id("first-number")).sendKeys(Float.toString(f));
-        driver.findElement(By.id("second-number")).sendKeys(Float.toString(g));
-        driver.findElement(By.id("multiplyer-button")).click();
-		
+		driver.findElement(By.id("second-number")).sendKeys(Float.toString(g));
+		driver.findElement(By.id("multiplyer-button")).click();
+
 	}
 }

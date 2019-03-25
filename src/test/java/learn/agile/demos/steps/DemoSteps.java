@@ -11,38 +11,35 @@ import learn.agile.demos.CucumberConfiguration;
 import learn.agile.demos.DemoApplication;
 import learn.agile.demos.pages.DemoPage;
 
-
-
 /**
  * @author pcooke
  *
  */
-@SpringBootTest(classes = DemoApplication.class,
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ContextConfiguration(classes = {CucumberConfiguration.class})
+@SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ContextConfiguration(classes = { CucumberConfiguration.class })
 public class DemoSteps {
-    int count = 0;
+	int count = 0;
 
-    @Autowired
-    DemoPage demoPage;
+	@Autowired
+	DemoPage demoPage;
 
-    /**
-     * @throws Throwable
-     */
-    @Given("^I am on the demo page$")
-    public void i_am_on_the_demo_page() throws Throwable {
-        demoPage.go();
-    }
+	/**
+	 * @throws Throwable
+	 */
+	@Given("^I am on the demo page$")
+	public void i_am_on_the_demo_page() throws Throwable {
+		demoPage.go();
+	}
 
-    /**
-     * @param sum
-     * @throws Throwable
-     */
-    @SuppressWarnings("deprecation")
+	/**
+	 * @param sum
+	 * @throws Throwable
+	 */
+	@SuppressWarnings("deprecation")
 	@Then("^the result is (-?\\d+\\.?\\d*)$")
-    public void the_result_is(float sum) throws Throwable {
-    	 assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
-    }
+	public void the_result_is(final float sum) throws Throwable {
+		assert (new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
+	}
 
 	/**
 	 * @param x
@@ -50,7 +47,7 @@ public class DemoSteps {
 	 * @throws Throwable
 	 */
 	@When("^I multiply the numbers (-?\\d+\\.?\\d+) and (-?\\d+\\.?\\d+)$")
-	public void iMultiplyTheNumbersAnd(float x, float y) throws Throwable {
+	public void iMultiplyTheNumbersAnd(final float x, final float y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
 }

@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.DemoApplication;
-import learn.agile.demos.controllers.CalculatorController;
 
 /**
  * 
@@ -26,6 +25,7 @@ public class CalculatorControllerIT {
 
 	/**
 	 * ensure existing integer tests continue to work
+	 * 
 	 * @throws Exception
 	 */
 	@SuppressWarnings("deprecation")
