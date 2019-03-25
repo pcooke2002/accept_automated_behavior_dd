@@ -28,7 +28,7 @@ public class CalculatorController {
 			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
-	
+
 	/**
 	 * @param firstNumber
 	 * @param secondNumber
@@ -41,7 +41,7 @@ public class CalculatorController {
 		return calculatorService.subtract(firstNumber, secondNumber);
 	}
 
-    /**
+	/**
 	 * @return float
 	 */
 	@RequestMapping("/multiplyer")
@@ -56,7 +56,7 @@ public class CalculatorController {
 	 */
 	@RequestMapping("/divider")
 	public float divider(
-			@RequestParam(value = "firstNumber", defaultValue = "0")  final float firstNumber,
+			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
 			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
 		return calculatorService.divide(firstNumber, secondNumber);
 	}

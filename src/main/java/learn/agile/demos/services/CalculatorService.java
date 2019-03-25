@@ -2,7 +2,6 @@ package learn.agile.demos.services;
 
 import org.springframework.stereotype.Service;
 
-
 /**
  * @author pcooke
  *
@@ -13,26 +12,29 @@ public class CalculatorService {
 
 	/**
 	 * add 2 numbers
+	 * 
 	 * @param x
 	 * @param y
 	 * @return the result of the addition
 	 */
-	public float add(float x, float y) {
+	public float add(final float x, final float y) {
 		return x + y;
 	}
 
-    /**
+	/**
 	 * subtract 2 numbers
+	 * 
 	 * @param firstNumber
-	 * @param secondNumber 
+	 * @param secondNumber
 	 * @return the result of subtraction
 	 */
-	public float subtract(float x, float y) {
+	public float subtract(final float x, final float y) {
 		return x - y;
 	}
 
 	/**
 	 * multiply 2 numbers
+	 * 
 	 * @param firstNumber
 	 * @param secondNumber
 	 * @return the result of multiplication
@@ -43,12 +45,12 @@ public class CalculatorService {
 
 	/**
 	 * multiply 2 numbers
+	 * 
 	 * @param firstNumber
 	 * @param secondNumber
 	 * @return the result of multiplication
 	 */
 	public float divide(final float firstNumber, final float secondNumber) {
-		System.out.println(">" + (firstNumber/secondNumber) + "<");
 		return firstNumber / secondNumber;
 	}
 }

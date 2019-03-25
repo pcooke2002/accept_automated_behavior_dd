@@ -17,7 +17,7 @@ myApp.config(['$httpProvider', function($httpProvider) {
 }]);
 
 
-myApp.controller("additionController", function($http, $scope) {
+myApp.controller("calculatorController", function($http, $scope) {
     $scope.add =  function() {
         $http.get('/adder',{params:{firstNumber: $scope.firstNumber, secondNumber: $scope.secondNumber}}).then(
         function(response){
