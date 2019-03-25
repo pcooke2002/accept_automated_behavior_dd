@@ -31,16 +31,15 @@ public class DemoSteps {
 		demoPage.go();
 	}
 
-
-	 /**
-     * @param sum
-     * @throws Throwable
-     */
-    @SuppressWarnings("deprecation")
+	/**
+	 * @param sum
+	 * @throws Throwable
+	 */
+	@SuppressWarnings("deprecation")
 	@Then("^the result is (-?\\d+\\.?\\d*)$")
-    public void the_result_is(float sum) throws Throwable {
-        assert(new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
-    }
+	public void the_result_is(final float sum) throws Throwable {
+		assert (new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
+	}
 
 	/**
 	 * @param arg1
@@ -48,7 +47,7 @@ public class DemoSteps {
 	 * @throws Exception
 	 */
 	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
-	public void i_subtract_the_numbers_and(float x, float y) throws Exception {
-	    demoPage.subtractNumbers(x, y);
+	public void i_subtract_the_numbers_and(final float x, final float y) throws Exception {
+		demoPage.subtractNumbers(x, y);
 	}
 }
