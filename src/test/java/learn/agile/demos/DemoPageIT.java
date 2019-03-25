@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -28,8 +27,8 @@ public class DemoPageIT {
 	public void simpleTest() throws Exception {
 		demoPage.go();
 		demoPage.addNumbers(5.24f, 5.36f);
-//		Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
-		assert(new Float(10.6f).equals( new Float(demoPage.getCalculatorResults())));
+		Thread.sleep(100);  // timing - for some reason on some OS's webdriver returns too quickly
+		assert (new Float(10.6f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 
 }
