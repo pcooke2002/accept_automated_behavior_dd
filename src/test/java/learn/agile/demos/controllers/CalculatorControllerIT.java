@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.DemoApplication;
-import learn.agile.demos.controllers.CalculatorController;
 
 /**
  * <p>
@@ -30,7 +29,7 @@ public class CalculatorControllerIT {
      * @throws Exception
      */
     @Test
-    public void testAdder() throws Exception {
+	public void testAdder() throws Exception {
         assertEquals(2, calculatorController.adder(1, 1));
         assertEquals(3, calculatorController.adder(2, 1));
         assertEquals(1000, calculatorController.adder(999, 1));

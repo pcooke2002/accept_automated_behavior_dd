@@ -28,5 +28,4 @@ public class CalculatorController {
 			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
 		return calculatorService.add(firstNumber, secondNumber);
 	}
-
 }

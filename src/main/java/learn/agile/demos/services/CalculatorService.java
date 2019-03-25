@@ -20,5 +20,4 @@ public class CalculatorService {
 	public int add(final int x, final int y) {
 		return x + y;
 	}
-
 }

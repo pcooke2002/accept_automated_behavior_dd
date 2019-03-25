@@ -1,6 +1,5 @@
 package learn.agile.demos.steps;
 
-
 import static org.junit.Assert.assertEquals;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,45 +13,42 @@ import learn.agile.demos.CucumberConfiguration;
 import learn.agile.demos.DemoApplication;
 import learn.agile.demos.pages.DemoPage;
 
-
-
 /**
  * @author pcooke
  *
  */
-@SpringBootTest(classes = DemoApplication.class,
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ContextConfiguration(classes = {CucumberConfiguration.class})
+@SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@ContextConfiguration(classes = { CucumberConfiguration.class })
 public class DemoSteps {
-    int count = 0;
+	int count = 0;
 
-    @Autowired
-    DemoPage demoPage;
+	@Autowired
+	DemoPage demoPage;
 
-    /**
-     * @throws Throwable
-     */
-    @Given("^I am on the demo page$")
-    public void i_am_on_the_demo_page() throws Throwable {
-        demoPage.go();
-    }
+	/**
+	 * @throws Throwable
+	 */
+	@Given("^I am on the demo page$")
+	public void i_am_on_the_demo_page() throws Throwable {
+		demoPage.go();
+	}
 
-    /**
-     * @param x
-     * @param y
-     * @throws Throwable
-     */
-    @When("^I add the numbers (-?\\d+) and (-?\\d+)$")
-    public void i_add_the_numbers_and(final int x, final int y) throws Throwable {
-       demoPage.addNumbers(x, y);
-    }
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I add the numbers (-?\\d+) and (-?\\d+)$")
+	public void i_add_the_numbers_and(final int x, final int y) throws Throwable {
+		demoPage.addNumbers(x, y);
+	}
 
-    /**
-     * @param sum
-     * @throws Throwable
-     */
-    @Then("^the result is (-?\\d+)$")
-    public void the_result_is(final int sum) throws Throwable {
-        assertEquals(demoPage.getCalculatorResults(), sum);
-    }
+	/**
+	 * @param sum
+	 * @throws Throwable
+	 */
+	@Then("^the result is (-?\\d+)$")
+	public void the_result_is(final int sum) throws Throwable {
+		assertEquals(demoPage.getCalculatorResults(), sum);
+	}
 }
