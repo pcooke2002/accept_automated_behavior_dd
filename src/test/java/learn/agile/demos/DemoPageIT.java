@@ -8,7 +8,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import learn.agile.demos.pages.DemoPage;
 
-
 /**
  * @author pcooke
  *
@@ -20,7 +19,6 @@ public class DemoPageIT {
 	@Autowired
 	DemoPage demoPage;
 
-	
 	/**
 	 * @throws Exception
 	 */
@@ -29,7 +27,7 @@ public class DemoPageIT {
 	public void simpleDivideTest() throws Exception {
 		demoPage.go();
 		demoPage.divideNumbers(15.2324f, 5.333f);
-		Thread.sleep(100);
-		assert(new Float(2.8562534f).equals( new Float(demoPage.getCalculatorResults())));
+//		Thread.sleep(100);
+		assert (new Float(2.8562534f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 }
