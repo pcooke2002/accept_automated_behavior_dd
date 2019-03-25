@@ -40,4 +40,15 @@ public class CalculatorService {
 	public float multiply(final float x, final float y) {
 		return x * y;
 	}
+
+	/**
+	 * multiply 2 numbers
+	 * @param firstNumber
+	 * @param secondNumber
+	 * @return the result of multiplication
+	 */
+	public float divide(final float firstNumber, final float secondNumber) {
+		System.out.println(">" + (firstNumber/secondNumber) + "<");
+		return firstNumber / secondNumber;
+	}
 }

@@ -1,5 +1,6 @@
 package learn.agile.demos.steps;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -70,5 +71,11 @@ public class DemoSteps {
 	@When("^I multiply the numbers (-?\\d+\\.?\\d+) and (-?\\d+\\.?\\d+)$")
 	public void iMultiplyTheNumbersAnd(float x, float y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
+	}
+	
+
+	@When("^I divide the numbers (-?\\d+\\.?\\d*) by  (-?\\d+\\.?\\d*)$")
+	public void iDivideTheNumbersBy(float x, float y) throws Throwable {
+		demoPage.divideNumbers(x, y);
 	}
 }

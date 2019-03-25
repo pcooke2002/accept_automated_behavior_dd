@@ -64,4 +64,16 @@ public class DemoPageIT {
 //		Thread.sleep(100);  //web driver on some OSs respond too quickly
 		assert(new Float(25f).equals( new Float(demoPage.getCalculatorResults())));
 	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@SuppressWarnings("deprecation")
+	@Test
+	public void simpleDivideTest() throws Exception {
+		demoPage.go();
+		demoPage.divideNumbers(15.2324f, 5.333f);
+//		Thread.sleep(100);  //web driver on some OSs respond too quickly
+		assert(new Float(2.8562534f).equals( new Float(demoPage.getCalculatorResults())));
+	}
 }
