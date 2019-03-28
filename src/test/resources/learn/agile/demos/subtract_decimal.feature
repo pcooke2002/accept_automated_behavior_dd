@@ -10,10 +10,10 @@ Feature: subtractition decimals Feature
     When I subtract the numbers 2.35 and -3.45
     Then the result is 5.8
 
-  Scenario: subtract positive and negative numbers
+  Scenario: subtract negative and postivie numbers
     Given I am on the demo page
-    When I subtract the numbers 2.35 and-3.45
-    Then the result is -1.4
+    When I subtract the numbers -2.35 and 3.45
+    Then the result is -5.8
 
   Scenario: subtract two negative numbers
     Given I am on the demo page

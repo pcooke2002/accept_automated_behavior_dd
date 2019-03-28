@@ -59,7 +59,7 @@ public class DemoPage {
 	public float getCalculatorResults() throws InterruptedException {
 		WebElement resultEl = (new WebDriverWait(driver, 300))
 				.until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-//		Thread.sleep(200); // timing - for some reason on some OS's webdriver returns too quickly
+//		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly
 		return Float.parseFloat(resultEl.getText());
 	}
 
