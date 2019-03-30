@@ -26,7 +26,7 @@ public class TestConfig {
 	private static final String IE_DRIVER = "./src/test/resources/bin/MicrosoftWebDriver.exe";
 	private static final String LINUX_FIREFOX_DRIVER = "./src/test/resources/bin/linux-geckodriver";
 	private static final String MAC_FIREFOX_DRIVER = "./src/test/resources/bin/mac-geckodriver";
-	private static final String WINDOWS_FIREFOX_DRIVER = "./src/test/resources/bin/gecodriver.exe";
+	private static final String WINDOWS_FIREFOX_DRIVER = "./src/test/resources/bin/geckodriver.exe";
 
 	/**
 	 * @return a reference to chrome WebDriver or specific OS
