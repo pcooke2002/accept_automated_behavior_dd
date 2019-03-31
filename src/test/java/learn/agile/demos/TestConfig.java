@@ -24,7 +24,7 @@ public class TestConfig {
 	private static final String MAC_CHROME_DRIVER = "./src/test/resources/bin/mac-chromedriver";
 	private static final String WINDOWS_CHROME_DRIVER = "./src/test/resources/bin/chromedriver.exe";
 	private static final String EDGE_DRIVER = "./src/test/resources/bin/MicrosoftWebDriver.exe";
-	private static final String IE_DRIVER = "./src/test/resources/bin/MicrosoftWebDriver.exe";
+	private static final String IE_DRIVER = "./src/test/resources/bin/IEDriverServer.exe";
 	private static final String LINUX_FIREFOX_DRIVER = "./src/test/resources/bin/linux-geckodriver";
 	private static final String MAC_FIREFOX_DRIVER = "./src/test/resources/bin/mac-geckodriver";
 	private static final String WINDOWS_FIREFOX_DRIVER = "./src/test/resources/bin/geckodriver.exe";
