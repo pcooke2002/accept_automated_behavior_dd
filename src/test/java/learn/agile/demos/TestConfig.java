@@ -7,6 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -58,9 +59,14 @@ public class TestConfig {
 	}
 
 	private WebDriver createIEWebDriver() {
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability(IE_DRIVER, true);
+		capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION,true);
+		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+
 		String driverPath = IE_DRIVER;
 		System.setProperty("webdriver.ie.driver", driverPath);
-		WebDriver webDriver = new InternetExplorerDriver();
+		WebDriver webDriver = new InternetExplorerDriver(capabilities);
 		return webDriver;
 	}
 
