@@ -41,9 +41,8 @@ public class DemoSteps {
 		assert (new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
 	}
 
-	@When("^I divide the numbers (-?\\d+\\.?\\d*) by  (-?\\d+\\.?\\d*)$")
+	@When("^I divide (-?\\d+\\.?\\d*) by (-?\\d+\\.?\\d*)$")
 	public void iDivideTheNumbersBy(final float x, final float y) throws Throwable {
 		demoPage.divideNumbers(x, y);
 	}
-
 }

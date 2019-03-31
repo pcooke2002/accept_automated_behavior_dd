@@ -27,7 +27,7 @@ public class DemoPageIT {
 	public void simpleDivideTest() throws Exception {
 		demoPage.go();
 		demoPage.divideNumbers(15.2324f, 5.333f);
-//		Thread.sleep(100);
+//		 Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
 		assert (new Float(2.8562534f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 }

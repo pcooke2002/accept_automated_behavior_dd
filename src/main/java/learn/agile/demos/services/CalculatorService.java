@@ -17,8 +17,6 @@ public class CalculatorService {
 	 * @return the result of multiplication
 	 */
 	public float divide(final float firstNumber, final float secondNumber) {
-		System.out.println(">" + (firstNumber/secondNumber) + "<");
 		return firstNumber / secondNumber;
 	}
-
 }
