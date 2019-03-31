@@ -63,6 +63,7 @@ public class TestConfig {
 		capabilities.setCapability(IE_DRIVER, true);
 		capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION,true);
 		capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 
 		String driverPath = IE_DRIVER;
 		System.setProperty("webdriver.ie.driver", driverPath);
