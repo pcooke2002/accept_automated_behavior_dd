@@ -46,7 +46,7 @@ public class DemoSteps {
 	 * @param y
 	 * @throws Throwable
 	 */
-	@When("^I multiply the numbers (-?\\d+\\.?\\d+) and (-?\\d+\\.?\\d+)$")
+	@When("^I multiply the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
 	public void iMultiplyTheNumbersAnd(final float x, final float y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
