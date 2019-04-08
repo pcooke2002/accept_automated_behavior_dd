@@ -8,49 +8,52 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CalculatorService {
-	int notUsedVariableForScanBugs;
+    /**
+     * Variable is not used for spot bugs to find.
+     */
+    final int  notUsedVariableForScanBugs = 0;
 
-	/**
-	 * add 2 numbers
-	 * 
-	 * @param x
-	 * @param y
-	 * @return the result of the addition
-	 */
-	public float add(final float x, final float y) {
-		return x + y;
-	}
+    /**
+     * add 2 numbers.
+     *
+     * @param x first operator.
+     * @param y second operator.
+     * @return the result of the addition.
+     */
+    public final float add(final float x, final float y) {
+        return x + y;
+    }
 
-	/**
-	 * subtract 2 numbers
-	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return the result of subtraction
-	 */
-	public float subtract(final float x, final float y) {
-		return x - y;
-	}
+    /**
+     * subtract 2 numbers.
+     *
+     * @param x first operand.
+     * @param y second operand.
+     * @return the result of subtraction.
+     */
+    public final float subtract(final float x, final float y) {
+        return x - y;
+    }
 
-	/**
-	 * multiply 2 numbers
-	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return the result of multiplication
-	 */
-	public float multiply(final float x, final float y) {
-		return x * y;
-	}
+    /**
+     * multiply 2 numbers.
+     *
+     * @param x first operand.
+     * @param y second operand.
+     * @return the result of multiplication.
+     */
+    public final float multiply(final float x, final float y) {
+        return x * y;
+    }
 
-	/**
-	 * multiply 2 numbers
-	 * 
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return the result of multiplication
-	 */
-	public float divide(final float firstNumber, final float secondNumber) {
-		return firstNumber / secondNumber;
-	}
+    /**
+     * multiply 2 numbers.
+     *
+     * @param x first operand.
+     * @param y second operand.
+     * @return the result of multiplication.
+     */
+    public final float divide(final float x, final float y) {
+        return x / y;
+    }
 }

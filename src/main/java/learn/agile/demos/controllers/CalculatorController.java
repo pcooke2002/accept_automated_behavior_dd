@@ -14,50 +14,60 @@ import learn.agile.demos.services.CalculatorService;
 @RestController
 public class CalculatorController {
 
-	@Autowired
-	private CalculatorService calculatorService;
+    /**
+     * Reference to the Calculator service.
+     */
+    @Autowired
+    private  CalculatorService calculatorService;
 
-	/**
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return float
-	 */
-	@RequestMapping("/adder")
-	public float adder(
-			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
-		return calculatorService.add(firstNumber, secondNumber);
-	}
+    /**
+     * Add two numbers.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return float result of Add..
+     */
+    @RequestMapping("/adder")
+    public final float adder(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.add(firstNumber, secondNumber);
+    }
 
-	/**
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return float
-	 */
-	@RequestMapping("/subtracter")
-	public float subtracter(
-			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
-		return calculatorService.subtract(firstNumber, secondNumber);
-	}
+    /**
+     * Subtract two numbers.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return float result of subtract.
+     */
+    @RequestMapping("/subtracter")
+    public final float subtracter(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.subtract(firstNumber, secondNumber);
+    }
 
-	/**
-	 * @return float
-	 */
-	@RequestMapping("/multiplyer")
-	public float multiplyer(
-			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
-		return calculatorService.multiply(firstNumber, secondNumber);
-	}
+    /**
+     * Multiply two numbers.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     *  @return float result of Multiply.
+     */
+    @RequestMapping("/multiplyer")
+    public final float multiplyer(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.multiply(firstNumber, secondNumber);
+    }
 
-	/**
-	 * @return int
-	 */
-	@RequestMapping("/divider")
-	public float divider(
-			@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
-		return calculatorService.divide(firstNumber, secondNumber);
-	}
+    /**
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return float result of Divide.
+     */
+    @RequestMapping("/divider")
+    public final float divider(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.divide(firstNumber, secondNumber);
+    }
 }
