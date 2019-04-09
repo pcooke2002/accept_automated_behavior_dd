@@ -14,18 +14,22 @@ import learn.agile.demos.services.CalculatorService;
 @RestController
 public class CalculatorController {
 
-	@Autowired
-	private CalculatorService calculatorService;
+    /**
+     * Calculator service.
+     */
+    @Autowired
+    private CalculatorService calculatorService;
 
-	/**
-	 * @param firstNumber
-	 * @param secondNumber
-	 * @return int
-	 */
-	@RequestMapping("/adder")
-	public int adder(
-			@RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
-			@RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
-		return calculatorService.add(firstNumber, secondNumber);
-	}
+    /**
+     * Controller add function.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return int The result of the add operation
+     */
+    @RequestMapping("/adder")
+    public final int adder(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
+        return calculatorService.add(firstNumber, secondNumber);
+    }
 }

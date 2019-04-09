@@ -13,18 +13,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DemoApplication {
 
-	/**
-	 * @param args
-	 */
-	public static void main(final String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    /**
+     * Main.
+     * @param args arguments for main.
+     */
+    public static final void main(final String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
-	/**
-	 * @return
-	 */
-	@RequestMapping("/")
-	public String index() {
-		return "index";
-	}
+    /**
+     * location where to redirect HttpRequest when not specified.
+     * @return string index.
+     */
+    @RequestMapping("/")
+    public final String index() {
+        return "index";
+    }
 }

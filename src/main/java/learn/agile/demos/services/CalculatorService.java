@@ -9,15 +9,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CalculatorService {
-	int notUsedVariableForScanBugs;
+    /**
+     * a variable for spotbugs to find.
+     */
+    private final int notUsedVariableForScanBugs = 0;
 
-	/**
-	 * add 2 numbers
-	 * @param x
-	 * @param y
-	 * @return the result of the addition
-	 */
-	public int add(final int x, final int y) {
-		return x + y;
-	}
+    /**
+     * add 2 numbers.
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the addition
+     */
+    public final int add(final int x, final int y) {
+        return x + y;
+    }
 }
